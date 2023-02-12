@@ -1,5 +1,5 @@
 # Perfil do Github
- A ideia é simples, um site onde voce busca por um usuário do Github e ele mostra o Perfil e os repositórios. Foi criado com React [Vite], Html5 e Css3.
+ A ideia é simples, um site onde voce busca por um usuário do Github e ele mostra o Perfil e os repositórios. Foi criado com Vite + React, SASS e HTML.
 
 ### Github Pages
  https://u-dani.github.io/perfil-github/
