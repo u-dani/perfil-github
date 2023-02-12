@@ -1,0 +1,141 @@
+
+@use '../variables.scss' as *;
+@use '../mixins.scss' as *;
+
+.container {
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    @include flexCenter();
+    gap: 30px;
+    color: $primary-color;
+    margin: 0 auto;
+    text-align: center;
+    min-height: 500px;
+
+    h1 {
+        font-size: $font-size-medium;
+        letter-spacing: .5px;
+    }
+
+    h3 {
+        font-family: monospace;
+        font-size: $font-size-small;
+    }
+
+    @media ( max-width: $max-width-mobile ) {
+        flex-direction: column;
+        height: auto;
+    }
+}
+
+.container-perfil {
+    @include flexCenter(column);
+    border-radius: 8px;
+    border: 2px solid $bg-primary-color;
+    gap: 15px;
+    height: 100%;
+    justify-content: space-between;
+    max-width: 400px;
+    min-width: 250px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding: 20px;
+    position: relative;
+    width: 25%;
+
+    &::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $bg-second-color;
+        border-radius: 5px;
+    }
+
+    img {
+        border-radius: 50%;
+        max-width: 250px;
+        width: 80%;
+    }
+
+    p {
+        letter-spacing: .5px;
+        line-height: 1.2em;
+    }
+
+    .container-follo {
+        @include flexCenter();
+        gap: 10px;
+        width: 100%;
+    }
+
+    a {
+        background-color: $bg-primary-color;
+        border-radius: 5px;
+        color: $primary-color;
+        font-family: monospace;
+        font-size: $font-size-small;
+        letter-spacing: 1px;
+        padding: .3em;
+        width: 100%;
+
+        &:hover {
+            background-color: lighten($bg-primary-color, 10);
+        }
+    }
+
+    .button-back {
+        background-color: $bg-second-color;
+        border-radius: 50%;
+        border: none;
+        left: 20px;
+        padding: .5em .5em .3em .5em;
+        position: absolute;
+        top: 20px;
+    
+        img {
+            width: 20px;
+        }
+    
+        &:hover {
+            background-color: darken($bg-second-color, 10);
+        }
+    }
+
+    @media ( max-width: $max-width-mobile ) {
+        width: 80%;
+    }
+}
+
+.container-repositories {
+    @include flexCenter(column);
+    border-radius: 8px;
+    border: 2px solid $bg-primary-color;
+    gap: 25px;
+    height: 100%;
+    justify-content: flex-start;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding: 20px;
+    width: 75%;
+
+    h1 {
+        text-align: start;
+    }
+    
+    &::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $bg-second-color;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    @media ( max-width: $max-width-mobile ) {
+        overflow: hidden;
+        width: 100%;
+    }
+}

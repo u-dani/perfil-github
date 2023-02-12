@@ -1,0 +1,98 @@
+
+@use '../variables.scss' as *;
+@use '../mixins.scss' as *;
+
+.repository {
+    border-radius: 3px;
+    border: 1px solid $bg-primary-color;
+    padding: 1em;
+    width: 100%;
+
+    .title {
+
+        @include flexCenter();
+        justify-content: space-between;
+    
+        h1 {
+            @include flexCenter();
+            font-size: $font-size-tiny;
+            gap: 10px;
+            justify-content: start;
+    
+            span {
+                border-radius: 18px;
+                border: 1px solid $bg-primary-color;
+                color: $bg-second-color;
+                font-size: calc($font-size-tiny - .6em);
+                padding: .3em .5em;
+            }
+        }
+    
+        a {
+            background-color: $bg-primary-color;
+            border-radius: 15px;
+            color: $primary-color;
+            font-family: monospace;
+            font-size: $font-size-tiny;
+            letter-spacing: .5px;
+            padding: .3em .6em;
+
+            &:hover {
+                background-color: lighten($bg-primary-color, 10);
+            }
+        }
+    }
+
+    p {
+        font-size: calc($font-size-tiny - .2em);
+        line-height: 1.2em;
+        margin: 15px 0px;
+        text-align: start;
+    }
+
+    .container_languages {
+        @include flexCenter();
+        font-size: .9em;
+        gap: 15px;
+        justify-content: start;
+        letter-spacing: .5px;
+
+        .div-language {
+            @include flexCenter();
+            gap: 3px;
+        }
+
+        .div-language .mark {
+            background-color: $bg-second-color;
+            border-radius: 50%;
+            display: block;
+            height: 12px;
+            margin-bottom: .1em;
+            width: 12px;
+        }
+    }
+}
+
+.HTML, .Jupyter {
+    background-color: #E34C26 !important;
+}
+
+.CSS, .Python, .GDScript {
+    background-color: #428DCC !important;
+}
+
+.SASS, .SCSS {
+    background-color: #C6538C !important;
+}
+
+.JavaScript, .TypeScript {
+    background-color: #F1E05A !important;
+}
+
+.Batchfile, .Shell {
+    background-color: #C1F12E !important;
+}
+
+
+
+
